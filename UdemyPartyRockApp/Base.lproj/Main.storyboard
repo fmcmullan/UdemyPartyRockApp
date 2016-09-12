@@ -56,11 +56,11 @@
                                 <frame key="frameInset" minY="239" width="375" height="436"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="85" id="VEL-Ej-iw4">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PartyRockTableCell" rowHeight="85" id="VEL-Ej-iw4" customClass="PartyTableViewCell" customModule="UdemyPartyRockApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VEL-Ej-iw4" id="LA8-FJ-xgN">
-                                            <frame key="frameInset" width="375" height="84"/>
+                                            <frame key="frameInset" width="375" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="c8q-87-xED">
@@ -86,6 +86,10 @@
                                                 <constraint firstItem="Vi1-6i-lzO" firstAttribute="centerY" secondItem="LA8-FJ-xgN" secondAttribute="centerY" id="hMo-aa-62e"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoPreviewImage" destination="c8q-87-xED" id="jG5-fA-nx1"/>
+                                            <outlet property="videoTitle" destination="Vi1-6i-lzO" id="a1q-LX-QIX"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -105,6 +109,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="partyRockTableView" destination="5gD-9u-c1J" id="MJu-fy-2k0"/>
                         <segue destination="PuV-ad-fYP" kind="showDetail" identifier="VideoViewController" id="uSz-nt-wvf"/>
                     </connections>
                 </viewController>
